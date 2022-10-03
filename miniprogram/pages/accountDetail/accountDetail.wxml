@@ -1,0 +1,56 @@
+<!--pages/accountDetail/accountDetail.wxml-->
+
+<view class="account-detail">
+  <!-- 上 -->
+  <view class="top">
+    <icon class="delete" type="cancel"></icon>
+    <view class="balance">
+      <view class="text">余额：60.00</view>
+      <image class="icon" src="/static/images/xiugai.svg"></image>
+    </view>
+    <view class="inflow-outflow">
+      <view class="inflow">流入：10.00</view>
+      <view class="outflow">流出：10.00</view>
+    </view>
+  </view>
+  <view class="line2"></view>
+  <!-- 中 -->
+  <view class="middle">
+    <view class="title-line">
+      <view class="title">账单</view>
+      <view class="line"></view>
+    </view>
+    <!-- 账单列表 -->
+    <view class="list">
+      <view class="list-item" bindtap="_toDetail">
+        <view class="left">
+          <image class="icon" src="/static/images/canyin.svg"></image>
+          <view class="title-icon-detail">
+            <view class="title-icon">
+              <text class="title">餐饮</text>
+              <image class="icon" src="/static/images/weixin.svg"></image>
+            </view>
+            <view class="detail">
+              2022-10-01 22:23
+            </view>
+          </view>
+        </view>
+        <view class="money">-5.00</view>
+      </view>
+    </view>
+  </view>
+  <!-- 下 -->
+  <view class="bottom">
+    <view class="line2"></view>
+    <view class="buttons">
+      <view class="inc-exp">
+        <view class="add">+</view>
+        <view class="text">收支</view>
+      </view>
+      <view class="transfer">
+        <view class="add">+</view>
+        <view class="text">转账</view>
+      </view>
+    </view>
+  </view>
+</view>

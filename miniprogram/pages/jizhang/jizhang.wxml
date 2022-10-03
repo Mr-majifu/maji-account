@@ -1,0 +1,66 @@
+<!--pages/jizhang/jizhang.wxml-->
+
+<view class="jizhang">
+  <view class="top">
+    <view class="expend">收入</view>
+    <view class="income">支出</view>
+  </view>
+
+  <!-- 图标 -->
+  <swiper class="swiper" indicator-dots="true">
+    <swiper-item class="swiper-item">
+      <view class="icon-title">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title">餐饮</view>
+      </view>
+      <view class="icon-title">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title">餐饮</view>
+      </view>
+      <view class="icon-title">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title">餐饮</view>
+      </view>
+      <view class="icon-title">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title">餐饮</view>
+      </view>
+      <view class="icon-title">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title">餐饮</view>
+      </view>
+      <view class="icon-title">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title">餐饮</view>
+      </view>
+    </swiper-item>
+    <swiper-item></swiper-item>
+  </swiper>
+
+  <view class="line"></view>
+  <!-- 日期，相机，金额 -->
+  <view class="count">
+    <view class="left">
+      <view class="time">今天</view>
+      <image class="icon" src="/static/images/xiangji.svg"></image>
+    </view>
+    <input type="number" class="number" placeholder="0" />
+  </view>
+  <view class="line"></view>
+  <!-- 备注 -->
+  <view class="remark">
+    <input type="text" class="text" placeholder="点击输入备注" />
+    <image class="icon" src="/static/images/youjiantou.svg"></image>
+  </view>
+  <view class="line"></view>
+  <!-- 账户 -->
+  <view class="account">
+    <view class="item">微信</view>
+  </view>
+  <view class="line2"></view>
+  <!-- 保存按钮 -->
+  <view class="bottom">
+    <view class="button1">保存再记</view>
+    <view class="button2">保存</view>
+  </view>
+</view>

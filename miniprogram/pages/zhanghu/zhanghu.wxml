@@ -1,0 +1,71 @@
+<!--pages/zhanghu/zhanghu.wxml-->
+
+<view class="zhanghu">
+  <!-- 净资产 -->
+  <view class="net-assets">
+    <view class="top">
+      <view class="text">净资产</view>
+      <image class="icon" src="/static/images/eye1.svg"></image>
+    </view>
+    <view class="middle">80.00</view>
+    <view class="bottom">
+      <view class="debt">
+        负债：0.00
+      </view>
+      <view class="total-assets">
+        总资产：80.00
+      </view>
+    </view>
+  </view>
+  <!-- 我的账户 -->
+  <view class="my-account">
+    <view class="title">
+      我的账户
+    </view>
+    <view class="account-list">
+      <view class="account-item">
+        <view class="left">
+          <image class="icon" src="/static/images/weixin-round.svg"></image>
+          <view class="title-detail">
+            <view class="title">微信</view>
+            <view class="detail">微信</view>
+          </view>
+        </view>
+        <view class="number">60.00</view>
+      </view>
+      <!-- 添加账户按钮 -->
+      <view class="add-account">
+        <view class="add">+</view>
+        <view class="text">添加账户</view>
+      </view>
+    </view>
+  </view>
+  <!-- 借款管理 -->
+  <view class="loan-management">
+    <view class="title">
+      借款管理
+    </view>
+    <view class="loan-list">
+      <view class="loan-item">
+        <view class="left">
+          <image class="icon" src="/static/images/shangjiantou.svg"></image>
+          <view class="title-detail">
+            <view class="title">借出</view>
+            <view class="detail">应收</view>
+          </view>
+        </view>
+        <view class="number">60.00</view>
+      </view>
+      <view class="loan-item">
+        <view class="left">
+          <image class="icon" src="/static/images/xiajiantou.svg"></image>
+          <view class="title-detail">
+            <view class="title">借入</view>
+            <view class="detail">应还</view>
+          </view>
+        </view>
+        <view class="number">60.00</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,127 @@
+/* pages/zhanghu/zhanghu.wxss */
+
+.zhanghu {
+
+  .net-assets {
+    background-color: #39a56f;
+    color: white;
+    padding: 30rpx 40rpx;
+
+    .top {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 50rpx;
+        height: 50rpx;
+        margin-left: 10rpx;
+      }
+    }
+
+    .middle {
+      margin: 16rpx 0;
+      font-size: 46rpx;
+    }
+
+    .bottom {
+      display: flex;
+
+      .total-assets {
+        margin-left: 50rpx;
+      }
+    }
+  }
+
+  .my-account {
+    margin: 30rpx 40rpx;
+
+    .account-list {
+      .account-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 100rpx;
+        padding: 5rpx 30rpx;
+        margin-top: 20rpx;
+
+        .left {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            width: 70rpx;
+            height: 70rpx;
+          }
+
+          .title-detail {
+            margin-left: 30rpx;
+
+            .detail {
+              font-size: 20rpx;
+              font-weight: 300;
+            }
+          }
+        }
+
+        .number {
+          font-size: 36rpx;
+        }
+      }
+
+      .add-account {
+        height: 100rpx;
+        background-color: white;
+        margin-top: 20rpx;
+        color: #39a56f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .add {
+          font-size: 60rpx;
+          padding-bottom: 12rpx;
+        }
+
+        .text {
+          padding-left: 10rpx;
+        }
+      }
+    }
+  }
+
+  .loan-management {
+    margin: 30rpx 40rpx;
+
+    .loan-list {
+      .loan-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 100rpx;
+        padding: 5rpx 30rpx;
+        margin-top: 20rpx;
+
+        .left {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            width: 70rpx;
+            height: 70rpx;
+          }
+
+          .title-detail {
+            margin-left: 30rpx;
+
+            .detail {
+              font-size: 20rpx;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}

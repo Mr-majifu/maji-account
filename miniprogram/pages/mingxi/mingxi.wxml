@@ -1,0 +1,78 @@
+<!--pages/mingxi/mingxi.wxml-->
+
+<view class="detail">
+  <!-- 绿色部分 -->
+  <view class="top">
+    <!-- 账本及分享 -->
+    <view class="account-book">
+      <view class="left" bindtap="_toZhangBen">
+        <view class="icon">
+          <image src="/static/images/point.svg"></image>
+        </view>
+        <view class="book-name">旅游账本</view>
+      </view>
+      <view class="right">
+        <text class="share-button">共享记账</text>
+      </view>
+    </view>
+    <!-- 收入、支出、结余总览 -->
+    <view class="overview">
+      <picker header-text="账单年月" mode="date" fields="month">
+        <view class="select-date">
+          <view class="years">2022</view>
+          <image src="/static/images/daosanjiao.svg"></image>
+          <view class="month">9月</view>
+        </view>
+      </picker>
+      <view class="month-expend">
+        <view class="describe">月支出</view>
+        <view class="money">100</view>
+      </view>
+      <view class="month-income">
+        <view class="describe">月收入</view>
+        <view class="money">200</view>
+      </view>
+      <view class="month-surplus">
+        <view class="describe">月结余</view>
+        <view class="money">100</view>
+      </view>
+    </view>
+  </view>
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="input">
+      <icon type="search" class="icon"></icon>
+      <input class="search-input" placeholder="输入金额、类别名或备注" bindtap="_toSearch" />
+    </view>
+  </view>
+  <!-- 账单列表 -->
+  <view class="list">
+    <view class="date-count">
+      <view class="date">
+        9月27日
+      </view>
+      <view class="count">
+        支出 5.00 结余 -5.00
+      </view>
+    </view>
+    <view class="list-item" bindtap="_toDetail">
+      <view class="left">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title-icon-detail">
+          <view class="title-icon">
+            <text class="title">餐饮</text>
+            <image class="icon" src="/static/images/weixin.svg"></image>
+          </view>
+          <view class="detail">
+            早餐
+          </view>
+        </view>
+      </view>
+      <view class="money">-5.00</view>
+    </view>
+  </view>
+  <!-- 记账按钮 -->
+  <view class="account-button">
+    <image class="icon" src="/static/images/bi.svg" bindtap="_toJiZhang"></image>
+  </view>
+</view>

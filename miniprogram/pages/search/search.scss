@@ -1,0 +1,70 @@
+/* pages/search/search.wxss */
+
+.search {
+  .top {
+    background-color: rgba(221, 221, 221, 0.637);
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .search-text {
+      // width: 100rpx;
+      margin-left: 20rpx;
+    }
+
+    .input {
+      background-color: rgba(196, 196, 196, 0.596);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 50rpx;
+      height: 60rpx;
+      padding: 0 20rpx;
+      // padding-left: 20rpx;
+
+      .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .icon {
+          margin-right: 20rpx;
+        }
+
+        .search-input {
+          width: 450rpx;
+        }
+      }
+    }
+  }
+
+  .overview {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 40rpx;
+    // background-color: pink;
+    height: 90rpx;
+
+    .icon {
+      width: 65rpx;
+      height: 65rpx;
+    }
+
+    .title-detail {
+      margin-left: 20rpx;
+      font-size: 26rpx;
+      font-weight: 300;
+      height: 90rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .detail {
+        .expend {
+          margin-left: 30rpx;
+        }
+      }
+    }
+  }
+}

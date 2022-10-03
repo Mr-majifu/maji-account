@@ -1,0 +1,39 @@
+<!--pages/clStats/clStats.wxml-->
+
+<view class="cl-stats">
+  <view class="top">
+    <view class="title">支出</view>
+    <view class="number">15.00</view>
+    <view class="detail">
+      <view class="lowest">最低：15.00</view>
+      <view class="total">共 1 笔</view>
+      <view class="highest">最高：15:00</view>
+    </view>
+  </view>
+  <!-- 账单列表 -->
+  <view class="list">
+    <view class="date-count">
+      <view class="date">
+        2022年9月27日
+      </view>
+      <view class="count">
+        共 5.00
+      </view>
+    </view>
+    <view class="list-item" bindtap="_toDetail">
+      <view class="left">
+        <image class="icon" src="/static/images/canyin.svg"></image>
+        <view class="title-icon-detail">
+          <view class="title-icon">
+            <text class="title">餐饮</text>
+            <image class="icon" src="/static/images/weixin.svg"></image>
+          </view>
+          <view class="detail">
+            早餐
+          </view>
+        </view>
+      </view>
+      <view class="money">-5.00</view>
+    </view>
+  </view>
+</view>

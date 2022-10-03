@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/mingxi/mingxi",
+    "pages/tongji/tongji",
+    "pages/zhanghu/zhanghu",
+    "pages/wode/wode",
+    "pages/zhangben/zhangben",
+    "pages/addZhangben/addZhangben",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/jizhang/jizhang",
+    "pages/clStats/clStats",
+    "pages/accountDetail/accountDetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39a56f",
+    "navigationBarTitleText": "麻吉记账",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "green",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/mingxi/mingxi",
+        "text": "明细",
+        "iconPath": "static/images/mingxi.png",
+        "selectedIconPath": "static/images/mingxi2.png"
+      },
+      {
+        "pagePath": "pages/tongji/tongji",
+        "text": "统计",
+        "iconPath": "static/images/tongji.png",
+        "selectedIconPath": "static/images/tongji2.png"
+      },
+      {
+        "pagePath": "pages/zhanghu/zhanghu",
+        "text": "账户",
+        "iconPath": "static/images/zhanghu.png",
+        "selectedIconPath": "static/images/zhanghu2.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的",
+        "iconPath": "static/images/wode.png",
+        "selectedIconPath": "static/images/wode2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

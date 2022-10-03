@@ -1,0 +1,27 @@
+<!--pages/zhangben/zhangben.wxml-->
+<!-- 账本 -->
+<view class="zhangben">
+  <!-- 账本列表 -->
+  <view class="account-list">
+    <view class="account-item">
+      <view class="left">
+        <image class="icon" src="/static/images/zhangben.svg"></image>
+        <view class="title-detail">
+          <view class="title">默认账本</view>
+          <view class="detail">1人</view>
+        </view>
+      </view>
+      <image class="icon2" src="/static/images/youjiantou.svg"></image>
+    </view>
+    <!-- 添加账户按钮 -->
+    <view class="add-account" bindtap="_toAddZhangben">
+      <view class="add">+</view>
+      <view class="text">添加账户</view>
+    </view>
+  </view>
+  <view class="remark">
+    <view>注：</view>
+    <view>1、点击账本进行切换，左滑账本可进行编辑、删除操作。</view>
+    <view>2、删除账本会把该账本内的数据全部删除，请慎重！</view>
+  </view>
+</view>

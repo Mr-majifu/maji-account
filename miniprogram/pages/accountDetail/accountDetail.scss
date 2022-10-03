@@ -1,0 +1,137 @@
+/* pages/accountDetail/accountDetail.wxss */
+.account-detail {
+  .top {
+    // position: relative;
+    height: 200rpx;
+    // background-color: pink;
+    padding: 20rpx 40rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .delete {
+      align-self: flex-end;
+    }
+
+    .balance {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      font-size: 40rpx;
+
+      .icon {
+        margin-left: 20rpx;
+        width: 30rpx;
+        height: 30rpx;
+      }
+    }
+
+    .inflow-outflow {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 40rpx;
+      font-weight: 300;
+    }
+  }
+
+  .line2 {
+    height: 16rpx;
+    background-color: rgba(201, 201, 201, 0.329);
+  }
+
+  .middle {
+    // background-color: pink;
+    padding: 0 30rpx 0 30rpx;
+
+    .title-line {
+      .title {
+        padding: 40rpx 0;
+      }
+
+      .line {
+        height: 1rpx;
+        background-color: rgba(201, 201, 201, 0.329);
+      }
+    }
+
+    .list {
+
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20rpx 0;
+        // background-color: pink;
+
+        .left {
+          display: flex;
+
+          .icon {
+            width: 85rpx;
+            height: 85rpx;
+          }
+
+          .title-icon-detail {
+            margin-left: 40rpx;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .title-icon {
+              display: flex;
+              align-items: center;
+
+              .icon {
+                width: 38rpx;
+                height: 38rpx;
+                margin-left: 10rpx;
+              }
+            }
+
+            .detail {
+              color: rgb(110, 110, 110);
+              font-size: 24rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    .buttons {
+      height: 130rpx;
+      color: #39a56f;
+      display: flex;
+      // justify-content: space-around;
+      line-height: 130rpx;
+      font-size: 36rpx;
+
+      .inc-exp,
+      .transfer {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .add {
+          font-size: 50rpx;
+          padding-bottom: 12rpx;
+        }
+
+        .text {
+          margin-left: 16rpx;
+        }
+      }
+      .inc-exp {
+        border-right: 1rpx rgba(201, 201, 201, 0.329) solid;
+      }
+    }
+  }
+}

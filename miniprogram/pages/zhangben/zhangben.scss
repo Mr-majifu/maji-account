@@ -1,0 +1,68 @@
+/* pages/zhangben/zhangben.wxss */
+
+.zhangben {
+  .account-list {
+    margin: 40rpx;
+
+    .account-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      height: 100rpx;
+      padding: 5rpx 30rpx;
+      margin-top: 30rpx;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          width: 90rpx;
+          height: 90rpx;
+        }
+
+        .title-detail {
+          margin-left: 30rpx;
+
+          .detail {
+            font-size: 20rpx;
+            font-weight: 300;
+          }
+        }
+      }
+
+      .icon2 {
+        width: 40rpx;
+        height: 40rpx;
+      }
+    }
+
+    .add-account {
+      height: 100rpx;
+      background-color: white;
+      margin-top: 30rpx;
+      color: #39a56f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .add {
+        font-size: 60rpx;
+        padding-bottom: 12rpx;
+      }
+
+      .text {
+        padding-left: 10rpx;
+      }
+    }
+  }
+  .remark {
+    margin: 40rpx;
+    font-size: 25rpx;
+    font-weight: 300;
+    view {
+      margin-top: 10rpx;
+    }
+  }
+}

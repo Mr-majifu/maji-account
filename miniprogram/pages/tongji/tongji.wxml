@@ -1,0 +1,55 @@
+<!--pages/tongji/tongji.wxml-->
+
+<view class="tongji">
+  <view class="top">
+    <!-- 类型 -->
+    <view class="type">
+      <view class="title">类型</view>
+      <view class="expand">支出</view>
+      <view class="income">收入</view>
+      <view class="overview">总览</view>
+    </view>
+    <view class="line"></view>
+    <!-- 账本 -->
+    <view class="account-book">
+      <view class="title">账本</view>
+      <view class="account-book-item">默认账本</view>
+    </view>
+    <view class="line"></view>
+    <!-- 时间 -->
+    <view class="time">
+      <view class="title">时间</view>
+      <view class="select-calculation">
+        <text class="text">按年</text>
+        <image class="icon" src="/static/images/daosanjiao-black.svg"></image>
+      </view>
+      <view class="start-time">2022</view>
+      <view class="text">~至~</view>
+      <view class="end-time">2022</view>
+    </view>
+  </view>
+  <!-- 环状图 -->
+  <view class="doughnut-chart">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <!-- 排行榜 -->
+  <view class="leaderboard">
+    <view class="title-count">
+      <view class="title">支出排行榜</view>
+      <view class="count">累计：20.00</view>
+    </view>
+    <view class="list">
+      <view class="list-item">
+        <view class="list-item-top">
+          <view class="icon-title">
+            <image class="icon" src="/static/images/canyin.svg"></image>
+            <view class="title">餐饮</view>
+          </view>
+          <view class="percentage">75.00%</view>
+          <view class="money">15.00</view>
+        </view>
+        <view class="line"></view>
+      </view>
+    </view>
+  </view>
+</view>

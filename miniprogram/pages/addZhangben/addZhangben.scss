@@ -1,0 +1,34 @@
+/* pages/addZhangben/addZhangben.wxss */
+
+.add-zhangben {
+  .top {
+    margin-top: 40rpx;
+    .line {
+      height: 1rpx;
+      background-color: rgba(211, 211, 211, 0.445);
+    }
+    .title-name {
+      display: flex;
+      justify-content: space-between;
+      padding: 30rpx 40rpx;
+      .name {
+        text-align: right;
+      }
+    }
+  }
+  .button {
+    background-color: #39a56f;
+    width: 80%;
+    height: 90rpx;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 250rpx;
+    text-align: center;
+    line-height: 90rpx;
+    border-radius: 16rpx;
+    color: white;
+    font-size: 36rpx;
+    // font-weight: 300;
+  }
+}

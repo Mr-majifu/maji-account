@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="detail">
+  <view class="icon-title">
+    <image class="icon" src="/static/images/canyin.svg"></image>
+    <view class="title">餐饮</view>
+  </view>
+  <view class="line"></view>
+  <view class="amount">金额：0.00</view>
+  <view class="line"></view>
+  <view class="date">日期：2022-09-29 11:12:34</view>
+  <view class="line"></view>
+  <view class="account">账户：微信</view>
+  <view class="line"></view>
+  <view class="remark">备注：早餐</view>
+  <view class="line"></view>
+  <image class="img" src="/static/images/weixin.svg"></image>
+  <view class="line"></view>
+
+  <view class="delete-input">
+    <view class="delete">删除</view>
+    <view class="input">修改</view>
+  </view>
+</view>

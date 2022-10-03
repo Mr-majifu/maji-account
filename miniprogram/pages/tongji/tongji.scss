@@ -1,0 +1,128 @@
+/* pages/tongji/tongji.wxss */
+
+.tongji {
+  background-color: rgba(240, 240, 240, 0.568);
+
+  .top {
+    background-color: white;
+    height: 242rpx;
+    margin: 20rpx;
+
+    .type,
+    .account-book,
+    .time {
+      display: flex;
+      align-items: center;
+      height: 80rpx;
+      line-height: 80rpx;
+    }
+
+    .type {
+
+      .expand,
+      .income,
+      .overview {
+        background-color: rgba(226, 226, 226, 0.568);
+        height: 46rpx;
+        line-height: 46rpx;
+        border-radius: 10rpx;
+        padding: 0 28rpx;
+      }
+    }
+
+    .account-book {
+      .account-book-item {
+        background-color: rgba(226, 226, 226, 0.568);
+        height: 46rpx;
+        line-height: 46rpx;
+        border-radius: 10rpx;
+        padding: 0 16rpx;
+      }
+    }
+
+    .time {
+      .select-calculation {
+        background-color: rgba(226, 226, 226, 0.568);
+        height: 46rpx;
+        line-height: 46rpx;
+        border-radius: 10rpx;
+        padding: 0 16rpx;
+        display: flex;
+        align-items: center;
+
+        .icon {
+          width: 25rpx;
+          height: 25rpx;
+          margin-left: 4rpx;
+        }
+      }
+
+      .start-time,
+      .end-time {
+        border: 1rpx rgba(211, 211, 211, 0.5) solid;
+        border-radius: 10rpx;
+        height: 46rpx;
+        line-height: 46rpx;
+        padding: 0 10rpx;
+      }
+    }
+
+    .type>view,
+    .account-book>view,
+    .time>view {
+      margin-left: 30rpx;
+    }
+
+    .line {
+      height: 1rpx;
+      background-color: rgba(226, 226, 226, 0.301);
+    }
+  }
+
+  .doughnut-chart {
+    height: 400rpx;
+    width: 100%;
+  }
+
+  // 排行榜
+  .leaderboard {
+    .title-count {
+      display: flex;
+      justify-content: space-between;
+      padding: 16rpx 30rpx;
+    }
+
+    .list {
+      background-color: white;
+
+      .list-item {
+        .list-item-top {
+          padding: 20rpx 30rpx;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .icon-title {
+            display: flex;
+            align-items: center;
+
+            .icon {
+              width: 65rpx;
+              height: 65rpx;
+            }
+
+            .title {
+              margin-left: 30rpx;
+            }
+          }
+        }
+        .line {
+          height: 1rpx;
+          background-color: rgba(226, 226, 226, 0.301);
+        }
+      }
+    }
+  }
+
+
+}

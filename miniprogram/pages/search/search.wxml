@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+
+<view class="search">
+<!-- 最上面的搜索条 -->
+  <view class="top">
+    <view class="input">
+      <view class="left">
+        <icon type="search" class="icon"></icon>
+        <input class="search-input" placeholder="输入金额、类别名或备注" auto-focus />
+      </view>
+      <icon type="cancel" color="rgb(109, 109, 109)" size="40rpx"></icon>
+    </view>
+    <view class="search-text">搜索</view>
+  </view>
+  <!-- 中间的总览 -->
+  <view class="overview">
+    <image class="icon" src="/static/images/zhangben-search.svg"></image>
+    <view class="title-detail">
+      <view class="title">总共搜索1条</view>
+      <view class="detail">
+        <text class="income">收入：0.00</text>
+        <text class="expend">支出：0.00</text>
+      </view>
+    </view>
+  </view>
+</view>

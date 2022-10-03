@@ -1,0 +1,150 @@
+/* pages/jizhang/jizhang.wxss */
+
+.jizhang {
+  .top {
+    height: 130rpx;
+    background-color: #39a56f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .expend {
+      border: 1rpx rgb(24, 24, 24) solid;
+      border-radius: 10rpx 0 0 10rpx;
+      padding: 16rpx 40rpx;
+      color: white;
+      background-color: rgb(24, 24, 24);
+    }
+
+    .income {
+      border: 1rpx rgb(24, 24, 24) solid;
+      border-radius: 0 10rpx 10rpx 0;
+      padding: 16rpx 40rpx;
+      // color: white;
+      // background-color: rgb(58, 58, 58);
+    }
+  }
+
+  .swiper {
+    height: 360rpx;
+
+    .swiper-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      // align-content: flex-start;
+
+      .icon-title {
+        width: 20%;
+        height: 150rpx;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // margin-top: 32rpx;
+
+        .icon {
+          width: 85rpx;
+          height: 85rpx
+        }
+
+        .title {
+          margin-top: 10rpx;
+        }
+      }
+    }
+  }
+
+  .line {
+    height: 1rpx;
+    background-color: rgba(189, 189, 189, 0.555);
+  }
+
+  .count {
+    height: 70rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10rpx 40rpx;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .time {
+        border: 1rpx black solid;
+        padding: 4rpx 16rpx;
+        border-radius: 12rpx;
+      }
+
+      .icon {
+        margin-left: 20rpx;
+        width: 50rpx;
+        height: 50rpx;
+      }
+    }
+
+    .number {
+      // background-color: pink;
+      text-align: right;
+      height: 70rpx;
+      width: 50%;
+      font-size: 60rpx;
+    }
+  }
+
+  .remark {
+    height: 70rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rpx 40rpx;
+
+    .text {
+      // background-color: pink;
+      width: 80%;
+      height: 70rpx;
+      font-size: 40rpx;
+    }
+
+    .icon {
+      width: 50rpx;
+      height: 50rpx;
+    }
+  }
+
+  .account {
+    height: 70rpx;
+    padding: 10rpx 40rpx;
+    display: flex;
+    align-items: center;
+
+    .item {
+      display: inline;
+      // width: 70rpx;
+      border: 1rpx black solid;
+      padding: 4rpx 16rpx;
+      border-radius: 12rpx;
+    }
+  }
+
+  .line2 {
+    height: 15rpx;
+    background-color: rgba(207, 207, 207, 0.685);
+  }
+
+  .bottom {
+    height: 90rpx;
+    display: flex;
+    border: 1rpx rgba(189, 189, 189, 0.555) solid;
+    .button1, .button2 {
+      width: 50%;
+      text-align: center;
+      line-height: 90rpx;
+      font-size: 36rpx;
+    }
+    .button2 {
+      border-left: 1rpx rgba(189, 189, 189, 0.555) solid;
+      color: #39a56f;
+    }
+  }
+}

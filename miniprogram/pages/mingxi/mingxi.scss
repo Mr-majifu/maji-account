@@ -1,0 +1,151 @@
+/* pages/mingxi/mingxi.scss */
+
+.detail {
+  .top {
+    background-color: #39a56f;
+    color: white;
+    font-weight: 400;
+    padding: 0 20rpx 20rpx 20rpx;
+
+    .account-book {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100rpx;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .icon image {
+          padding-top: 10rpx;
+          width: 50rpx;
+          height: 46rpx;
+        }
+      }
+
+      .right {
+        .share-button {
+          width: 230rpx;
+          color: white;
+          font-weight: 400;
+          border: 1rpx solid white;
+          border-radius: 50rpx;
+          padding: 5rpx 10rpx;
+        }
+      }
+    }
+
+    .overview {
+      display: flex;
+      justify-content: space-between;
+      height: 130rpx;
+      padding: 0 20rpx;
+
+      // background-color: black;
+      .select-date {
+        height: 130rpx;
+
+        image {
+          width: 30rpx;
+          height: 30rpx;
+        }
+      }
+
+      .select-date,
+      .month-expend,
+      .month-income,
+      .month-surplus {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+
+  .search {
+    background-color: rgba(221, 221, 221, 0.637);
+    padding: 20rpx 40rpx;
+
+    .input {
+      background-color: rgba(196, 196, 196, 0.596);
+      display: flex;
+      align-items: center;
+      border-radius: 50rpx;
+      height: 60rpx;
+      padding-left: 20rpx;
+
+      .icon {
+        margin-right: 20rpx;
+      }
+
+      .search-input {
+        width: 100%;
+      }
+    }
+  }
+
+  .list {
+    .date-count {
+      display: flex;
+      justify-content: space-between;
+      padding: 15rpx 40rpx;
+      font-size: 28rpx;
+      color: rgb(99, 98, 98);
+      background-color: rgba(233, 233, 233, 0.637);
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20rpx 40rpx;
+      // background-color: pink;
+
+      .left {
+        display: flex;
+
+        .icon {
+          width: 85rpx;
+          height: 85rpx;
+        }
+
+        .title-icon-detail {
+          margin-left: 40rpx;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .title-icon {
+            display: flex;
+            align-items: center;
+
+            .icon {
+              width: 38rpx;
+              height: 38rpx;
+              margin-left: 10rpx;
+            }
+          }
+
+          .detail {
+            color: rgb(110, 110, 110);
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .account-button {
+    position: fixed;
+    bottom: 40rpx;
+    right: 30rpx;
+
+    .icon {
+      width: 100rpx;
+      height: 100rpx;
+    }
+  }
+
+}

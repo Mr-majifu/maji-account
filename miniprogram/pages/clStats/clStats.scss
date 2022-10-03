@@ -1,0 +1,77 @@
+/* pages/clStats/clStats.wxss */
+
+.cl-stats {
+  .top {
+    height: 240rpx;
+    background-color: #39a56f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 40rpx;
+    color: white;
+    font-size: 36rpx;
+
+    .number {
+      font-size: 72rpx;
+      font-weight: 500;
+    }
+
+    .detail {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .list {
+    .date-count {
+      display: flex;
+      justify-content: space-between;
+      padding: 15rpx 40rpx;
+      font-size: 28rpx;
+      color: rgb(99, 98, 98);
+      background-color: rgba(233, 233, 233, 0.637);
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20rpx 40rpx;
+      // background-color: pink;
+
+      .left {
+        display: flex;
+
+        .icon {
+          width: 85rpx;
+          height: 85rpx;
+        }
+
+        .title-icon-detail {
+          margin-left: 40rpx;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .title-icon {
+            display: flex;
+            align-items: center;
+
+            .icon {
+              width: 38rpx;
+              height: 38rpx;
+              margin-left: 10rpx;
+            }
+          }
+
+          .detail {
+            color: rgb(110, 110, 110);
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+  }
+}

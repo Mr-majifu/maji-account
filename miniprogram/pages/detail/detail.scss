@@ -1,0 +1,55 @@
+/* pages/detail/detail.wxss */
+
+.detail {
+  .icon-title {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 95rpx;
+      height: 95rpx;
+    }
+
+    .title {
+      margin-left: 30rpx;
+    }
+  }
+
+  .icon-title,
+  .amount,
+  .date,
+  .account,
+  .remark,
+  .img {
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 10rpx 40rpx;
+  }
+
+  .img {
+    height: 180rpx;
+    width: 180rpx;
+  }
+
+  .line {
+    height: 1rpx;
+    background-color: rgba(201, 201, 201, 0.555);
+  }
+
+  .delete-input {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80rpx;
+
+    .delete,
+    .input {
+      width: 260rpx;
+      height: 95rpx;
+      background-color: #39a56f;
+      border-radius: 10rpx;
+      text-align: center;
+      line-height: 95rpx;
+      color: white;
+    }
+  }
+}
