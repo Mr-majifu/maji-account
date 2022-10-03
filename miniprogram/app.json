@@ -3,14 +3,14 @@
     "pages/mingxi/mingxi",
     "pages/tongji/tongji",
     "pages/zhanghu/zhanghu",
-    "pages/wode/wode",
     "pages/zhangben/zhangben",
     "pages/addZhangben/addZhangben",
     "pages/search/search",
     "pages/detail/detail",
     "pages/jizhang/jizhang",
     "pages/clStats/clStats",
-    "pages/accountDetail/accountDetail"
+    "pages/accountDetail/accountDetail",
+    "pages/my/my"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -43,7 +43,7 @@
         "selectedIconPath": "static/images/zhanghu2.png"
       },
       {
-        "pagePath": "pages/wode/wode",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "static/images/wode.png",
         "selectedIconPath": "static/images/wode2.png"
