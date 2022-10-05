@@ -1,16 +1,34 @@
 <!--pages/my/my.wxml-->
 
 <view class="my">
-  <block wx:if="{{!loginOk}}">
-    <image class="avatar" src="/static/images/touxiang.svg" mode="cover"></image>
-    <text class="nickname">微信用户</text>
-    <view class="login" bindtap="_login">登录</view>
-  </block>
-  <block wx:else>
-    <view class="userinfo-avatar">
-      <open-data type="userAvatarUrl"></open-data>
+  <!-- top -->
+  <view class="top">
+    <!-- 已登录 -->
+    <block wx:if="{{loginOk}}">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userinfo-nick-name">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </block>
+    <!-- 未登录 -->
+    <block wx:else>
+      <view class="no-login">未登录</view>
+    </block>
+    <view class="count">
+      <view class="use-date">
+        <view class="number">0</view>
+        <view class="text">使用天数</view>
+      </view>
+      <view class="bookkeeping-date">
+        <view class="number">0</view>
+        <view class="text">记账天数</view>
+      </view>
+      <view class="bookkeeping-count">
+        <view class="number">0</view>
+        <view class="text">记账笔数</view>
+      </view>
     </view>
-    <open-data type="userNickName"></open-data>
-    <view class="login" bindtap="_exitLogin">退出登录</view>
-  </block>
+  </view>
 </view>

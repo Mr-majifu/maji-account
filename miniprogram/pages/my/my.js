@@ -14,11 +14,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("这里的options", options);
-    this.setData({
-      nickName: options.nickName,
-      avatarUrl: options.avatarUrl
-    })
+    // console.log("这里的options", options);
+    // this.setData({
+    //   nickName: options.nickName,
+    //   avatarUrl: options.avatarUrl
+    // })
   },
 
   /**
@@ -32,21 +32,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   //小程序声明周期的可见性函数里面来控制显示
-  onShow() {
-    let userInfo = wx.getStorageSync('userInfo')
-    console.log("我的缓存信息", userInfo);
-    if (userInfo) {
-      this.setData({
-        loginOk: true,
-        nickName: userInfo.nickName, //从缓存中拿数据
-        avatarUrl: userInfo.avatarUrl
-      })
-    } else {
-      this.setData({
-        loginOk: false
-      })
-    }
-  },
+  // onShow() {
+  //   let userInfo = wx.getStorageSync('userInfo')
+  //   console.log("我的缓存信息", userInfo);
+  //   if (userInfo) {
+  //     this.setData({
+  //       loginOk: true,
+  //       nickName: userInfo.nickName, //从缓存中拿数据
+  //       avatarUrl: userInfo.avatarUrl
+  //     })
+  //   } else {
+  //     this.setData({
+  //       loginOk: false
+  //     })
+  //   }
+  // },
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -90,7 +90,7 @@ Page({
       })
       .then(res => {
         console.log("用户允许了微信授权登录", res.userInfo);
-        //注意：此时不能使用 wx.switchTab，不支持参数传递
+        // 注意：此时不能使用 wx.switchTab，不支持参数传递
         wx.reLaunch({
           //将微信头像和微信名称传递给【我的】页面
           url: '/pages/my/my?nickName=' + res.userInfo.nickName + '&avatarUrl=' + res.userInfo.avatarUrl,
@@ -120,4 +120,29 @@ Page({
       }
     })
   },
+
+  _click: function() {
+    // wx.cloud.callFunction({
+    //   // 云函数名称
+    //   name: 'add',
+    //   // 传给云函数的参数
+    //   data: {
+    //     a: 1,
+    //     b: 2,
+    //   },
+    // })
+    // .then(res => {
+    //   console.log(res.result.sum) // 3
+    // })
+    // .catch(console.error)
+    wx.cloud.callFunction({
+      name: 'test',
+    }).then(res => {
+      console.log(res.result);
+    }).catch(
+      console.error
+    )
+  },
+
+
 })

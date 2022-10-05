@@ -1,1 +1,53 @@
 /* pages/my/my.wxss */
+
+.my {
+	.top {
+		background-color: #39a56f;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10rpx;
+
+		.userinfo-avatar {
+      overflow: hidden;
+      width: 128rpx;
+      height: 128rpx;
+      margin: 10rpx;
+      border-radius: 50%;
+    }
+    
+    .userinfo-nick-name {
+      color: white;
+      margin-bottom: 10rpx;
+    }
+
+		.no-login {
+			color: rgb(44, 44, 44);
+			font-size: 40rpx;
+			margin: 45rpx 0;
+		}
+
+		.count {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			color: white;
+
+			.use-date,
+			.bookkeeping-date,
+			.bookkeeping-count {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.number {
+					font-size: 42rpx;
+				}
+
+				.text {
+					font-size: 26rpx;
+				}
+			}
+		}
+	}
+}
