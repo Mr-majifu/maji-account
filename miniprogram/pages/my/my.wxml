@@ -14,7 +14,7 @@
     </block>
     <!-- 未登录 -->
     <block wx:else>
-      <view class="no-login">未登录</view>
+      <view class="no-login" bindtap="_login">未登录</view>
     </block>
     <view class="count">
       <view class="use-date">

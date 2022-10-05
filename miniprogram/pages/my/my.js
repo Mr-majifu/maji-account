@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    loginOk: true,
+    loginOk: false,
     nickName: "",
     avatarUrl: "",
   },
@@ -32,21 +32,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   //小程序声明周期的可见性函数里面来控制显示
-  // onShow() {
-  //   let userInfo = wx.getStorageSync('userInfo')
-  //   console.log("我的缓存信息", userInfo);
-  //   if (userInfo) {
-  //     this.setData({
-  //       loginOk: true,
-  //       nickName: userInfo.nickName, //从缓存中拿数据
-  //       avatarUrl: userInfo.avatarUrl
-  //     })
-  //   } else {
-  //     this.setData({
-  //       loginOk: false
-  //     })
-  //   }
-  // },
+  onShow() {
+    let userInfo = wx.getStorageSync('userInfo')
+    console.log("我的缓存信息", userInfo);
+    if (userInfo) {
+      this.setData({
+        loginOk: true,
+        nickName: userInfo.nickName, //从缓存中拿数据
+        avatarUrl: userInfo.avatarUrl
+      })
+    } else {
+      this.setData({
+        loginOk: false
+      })
+    }
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -83,14 +83,13 @@ Page({
 
   },
 
-  //微信授权登录
+  // 微信授权登录，当用户点击“未登录”时登录，其实是为了获取用户信息，电话等
   _login() {
     wx.getUserProfile({
         desc: '用户完善会员资料',
       })
       .then(res => {
-        console.log("用户允许了微信授权登录", res.userInfo);
-        // 注意：此时不能使用 wx.switchTab，不支持参数传递
+        console.log("用户允许了微信授权登录", res);
         wx.reLaunch({
           //将微信头像和微信名称传递给【我的】页面
           url: '/pages/my/my?nickName=' + res.userInfo.nickName + '&avatarUrl=' + res.userInfo.avatarUrl,

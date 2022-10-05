@@ -1,29 +1,5 @@
 // app.js
 App({
-  // onLaunch: function () {
-  //   if (!wx.cloud) {
-  //     console.error('请使用 2.2.3 或以上的基础库以使用云能力');
-  //   } else {
-  //     wx.cloud.init({
-  //       // env 参数说明：
-  //       //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
-  //       //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
-  //       //   如不填则使用默认环境（第一个创建的环境）
-  //       // env: 'my-env-id',
-  //       traceUser: true,
-  //     });
-  //   }
-
-  //   this.globalData = {};
-
-  //   // 登录
-  //   wx.login({
-  //     success: res => {
-  //       console.log("wx.login",res.code)
-  //       // 发送 res.code 到后台换取 openId, sessionKey, unionId
-  //     },
-  //   })
-  // }
 
   flag: false,
 
@@ -32,23 +8,19 @@ App({
     await this.initcloud()
     // 判断 本地存储没有 userOpenid 并且没有 user
     if (!wx.getStorageSync('userOpenid') && !wx.getStorageSync('user')) {
-      console.log(123);
+      // 静默登录，没有弹窗询问，实际上我拿到了openid，能够进行绑定
       const res = await this.call({
         name: 'quickstartFunctions',
         data: {
           type: 'getOpenId',
         }
       })
-      console.log(res)
       if (res.success == true) {
         wx.setStorageSync('userOpenid', res.data)
-        // this.openidData();
+      } else {
+        console.log("获取 openId 失败");
       }
-      wx.navigateTo({
-        url: '/pages/login/index',
-      })
     }
-    // this.openidData();
   },
 
   // 初始化云
@@ -116,5 +88,6 @@ App({
       throw flag
     }
   },
+  
 
 });
