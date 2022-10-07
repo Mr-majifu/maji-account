@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    accountBookName: '', // 账本名称
   },
 
   /**
@@ -62,5 +62,20 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  _createAccountBook: function() {
+    wx.cloud.callFunction({
+      name: 'majiAccountFunction',
+      // 传给云函数的参数
+      data: {
+        type: 'createAccountBook',
+        accountBookName: this.accountBookName,
+      },
+      success: function(res) {
+        console.log(res)
+      },
+      fail: console.error
+    })
+  },
 })

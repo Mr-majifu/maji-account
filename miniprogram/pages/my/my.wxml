@@ -5,7 +5,7 @@
   <view class="top">
     <!-- 已登录 -->
     <block wx:if="{{loginOk}}">
-      <view class="userinfo-avatar">
+      <view class="userinfo-avatar" bindtap="_exitLogin">
         <open-data type="userAvatarUrl"></open-data>
       </view>
       <view class="userinfo-nick-name">
@@ -29,6 +29,19 @@
         <view class="number">0</view>
         <view class="text">记账笔数</view>
       </view>
+    </view>
+  </view>
+  <view class="line2"></view>
+  <view class="list">
+    <view class="list-item" bindtap="_toZhangBen">
+      <view class="content">
+        <view class="left">
+          <image class="icon" src="/static/images/wodezhangben.svg"></image>
+          <view class="text">我的账本</view>
+        </view>
+        <image class="icon2" src="/static/images/youjiantou.svg"></image>
+      </view>
+      <view class="line"></view>
     </view>
   </view>
 </view>

@@ -105,7 +105,7 @@ Page({
   // 退出登录
   _exitLogin() {
     wx.showModal({
-      content: "确定退出吗"
+      content: "确定退出登录吗"
     }).then(res => {
       if (res.confirm) {
         console.log("用户点击了确定");
@@ -120,28 +120,11 @@ Page({
     })
   },
 
-  _click: function() {
-    // wx.cloud.callFunction({
-    //   // 云函数名称
-    //   name: 'add',
-    //   // 传给云函数的参数
-    //   data: {
-    //     a: 1,
-    //     b: 2,
-    //   },
-    // })
-    // .then(res => {
-    //   console.log(res.result.sum) // 3
-    // })
-    // .catch(console.error)
-    wx.cloud.callFunction({
-      name: 'test',
-    }).then(res => {
-      console.log(res.result);
-    }).catch(
-      console.error
-    )
-  },
+  _toZhangBen: function() {
+    wx.navigateTo({
+      url: '/pages/zhangben/zhangben',
+    })
+  }
 
 
 })

@@ -5,11 +5,11 @@
     <view class="line"></view>
     <view class="title-name">
       <view class="title">账本名称</view>
-      <input class="name" placeholder="请输入账本名称" auto-focus />
+      <input class="name" placeholder="请输入账本名称" model:value="{{accountBookName}}" auto-focus />
     </view>
     <view class="line"></view>
   </view>
-  <view class="button">
+  <view class="button" bindtap="_createAccountBook">
     保存
   </view>
 </view>

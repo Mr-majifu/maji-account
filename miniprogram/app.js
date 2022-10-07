@@ -10,7 +10,7 @@ App({
     if (!wx.getStorageSync('userOpenid') && !wx.getStorageSync('user')) {
       // 静默登录，没有弹窗询问，实际上我拿到了openid，能够进行绑定
       const res = await this.call({
-        name: 'quickstartFunctions',
+        name: 'majiAccountFunction',
         data: {
           type: 'getOpenId',
         }
@@ -21,6 +21,13 @@ App({
         console.log("获取 openId 失败");
       }
     }
+    // 注册用户
+    await this.call({
+      name: 'majiAccountFunction',
+      data: {
+        type: 'registerUser',
+      }
+    })
   },
 
   // 初始化云
@@ -88,6 +95,6 @@ App({
       throw flag
     }
   },
-  
+
 
 });
