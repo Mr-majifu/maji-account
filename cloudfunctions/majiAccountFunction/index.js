@@ -1,6 +1,6 @@
 const getOpenId = require('./getOpenId/index');
 const registerUser = require('./registerUser/index');
-const accountBook = require('./accountBook/index');
+const createAccountBook = require('./createAccountBook/index');
 const getAccountBook = require('./getAccountBook/index');
 
 
@@ -11,8 +11,8 @@ exports.main = async (event, context) => {
       return await getOpenId.main(event, context);
     case 'registerUser':
       return await registerUser.main(event, context);
-    case 'accountBook':
-      return await accountBook.main(event, context);
+    case 'createAccountBook':
+      return await createAccountBook.main(event, context);
     case 'getAccountBook':
       return await getAccountBook.main(event, context);
   }

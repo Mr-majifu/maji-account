@@ -1,11 +1,14 @@
 // pages/zhangben/zhangben.js
+
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    accountBookList: [],
   },
 
   /**
@@ -26,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this._getAllAccountBook()
   },
 
   /**
@@ -69,5 +72,31 @@ Page({
     wx.navigateTo({
       url: '/pages/addZhangben/addZhangben',
     })
-  }
+  },
+
+  // 获取账本
+  async _getAllAccountBook() {
+    try {
+      // 调用 createAccountBook 云函数
+      const res = await app.call({
+        name: 'majiAccountFunction',
+        data: {
+          type: 'getAccountBook',
+        },
+      })
+      if (res.success == true) {
+        this.setData({
+          accountBookList: res.res.data
+        })
+      }
+    } catch (error) {
+      console.log(error);
+      wx.showToast({
+        title: '获取账本信息失败，请重试',
+        icon: 'error',
+        duration: 2000
+      })
+    }
+  },
+
 })

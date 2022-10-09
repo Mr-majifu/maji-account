@@ -1,4 +1,7 @@
 // pages/addZhangben/addZhangben.js
+
+const app = getApp()
+
 Page({
 
   /**
@@ -64,18 +67,28 @@ Page({
 
   },
 
-  _createAccountBook: function() {
-    wx.cloud.callFunction({
-      name: 'majiAccountFunction',
-      // 传给云函数的参数
-      data: {
-        type: 'createAccountBook',
-        accountBookName: this.accountBookName,
-      },
-      success: function(res) {
-        console.log(res)
-      },
-      fail: console.error
-    })
+  async _createAccountBook() {
+    try {
+      // 调用 createAccountBook 云函数
+      const res = await app.call({
+        name: 'majiAccountFunction',
+        data: {
+          type: 'createAccountBook',
+          accountBookName: this.data.accountBookName,
+        },
+      })
+      if (res.success == true) {
+        wx.navigateBack({
+          // delta: 0,
+        })
+      }
+    } catch (error) {
+      wx.showToast({
+        title: '创建失败，请重试',
+        icon: 'error',
+        duration: 2000
+      })
+    }
   },
+  
 })

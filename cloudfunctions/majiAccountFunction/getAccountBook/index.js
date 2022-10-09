@@ -14,17 +14,19 @@ exports.main = async (event, context) => {
     const db = cloud.database()
     const accountBook = db.collection('account-book')
     let msg = ''
+    let response
 
     await accountBook.where({
       createUserId: OPENID, // 创建者的 openId
     }).get().then(res => {
       msg = '查询账本成功'
-      return {
-        success: true,
-        msg: msg,
-        res: res,
-      };
+      response = res
     })
+    return {
+      success: true,
+      msg: msg,
+      res: response,
+    };
   } catch (e) {
     return {
       success: false,

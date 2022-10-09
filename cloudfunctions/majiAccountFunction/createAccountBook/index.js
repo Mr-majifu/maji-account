@@ -14,7 +14,7 @@ exports.main = async (event, context) => {
     const db = cloud.database()
     const accountBook = db.collection('account-book')
     let msg = ''
-
+    
     await accountBook.add({
       data: {
         createUserId: OPENID, // 创建者的 openId

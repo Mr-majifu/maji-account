@@ -3,11 +3,11 @@
 <view class="zhangben">
   <!-- 账本列表 -->
   <view class="account-list">
-    <view class="account-item">
+    <view class="account-item" wx:for="{{accountBookList}}" wx:key="_id">
       <view class="left">
         <image class="icon" src="/static/images/zhangben.svg"></image>
         <view class="title-detail">
-          <view class="title">默认账本</view>
+          <view class="title">{{item.accountBookName}}</view>
           <view class="detail">1人</view>
         </view>
       </view>
